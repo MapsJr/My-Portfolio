@@ -135,8 +135,8 @@ color:black;
 }
 
 .explore-btn{
-background:#111;
-color:black;
+background:rgba(255,255,255,.08);
+color:#000000;
 }
 
 .btn-outline{
