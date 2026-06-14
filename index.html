@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="style.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 </head>
 
 <body>
@@ -26,11 +27,17 @@
 <nav class="navbar">
     <div class="logo">TM.</div>
 
-    <ul>
+    <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
     </ul>
+
+    <div class="menu-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
 </nav>
 
 <section class="hero">
@@ -73,32 +80,68 @@
 
 </section>
 
-<section id="projects" class="hidden">
+<section id="skills" class="hidden">
 
-    <h2>Featured Work</h2>
+    <h2>Skills</h2>
 
-    <div class="projects-grid">
+    <div class="skills-grid">
 
-        <div class="project-card featured">
-
-            <span>Featured Project</span>
-
-            <h3>KMØD</h3>
-
-            <p>
-                Premium streetwear e-commerce platform built
-                from scratch.
-            </p>
-
-            <br>
-
-          <strong>
-            <a class="explore-btn" href="https://mapsjr.github.io/kmod-store/" target="_blank" rel="noopener">
-                Explore →
-           </a>
-          </strong>
-
+        <div class="skill-card">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JavaScript</p>
         </div>
+
+        <div class="skill-card">
+            <h3>Backend</h3>
+            <p>Firebase, Authentication</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>Tools</h3>
+            <p>GitHub, VS Code, Figma</p>
+        </div>
+
+        <div class="skill-card">
+            <h3>UI/UX</h3>
+            <p>Responsive Design, Animations</p>
+        </div>
+
+    </div>
+
+</section>
+
+<div class="project-card featured">
+
+    <div class="project-top">
+
+        <span>Featured Project</span>
+
+        <h3>KMØD</h3>
+
+    </div>
+
+    <p>
+        Premium streetwear e-commerce platform built
+        with modern UI, authentication system,
+        cart functionality and mobile-first design.
+    </p>
+
+    <div class="project-tech">
+
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>MySql</span>
+
+    </div>
+
+    <a href="https://mapsjr.github.io/kmod-store/"
+       target="_blank"
+       rel="noopener">
+       Visit Project →
+    </a>
+
+</div>
 
         <div class="project-card">
             <h3>Project 02</h3>
@@ -118,19 +161,33 @@
 
     <h2>Let's Build Something</h2>
 
-    <form>
+<form id="contactForm">
 
-        <input type="text" placeholder="Name">
+    <input
+        type="text"
+        id="name"
+        placeholder="Your Name"
+        required
+    >
 
-        <input type="email" placeholder="example@email.com">
+    <input
+        type="email"
+        id="email"
+        placeholder="Your Email: example@email.com"
+        required
+    >
 
-        <textarea placeholder="Message"></textarea>
+    <textarea
+        id="message"
+        placeholder="Your Message"
+        required
+    ></textarea>
 
-        <button type="submit">
-            Send Message
-        </button>
+    <button type="submit">
+        Send Message
+    </button>
 
-    </form>
+</form>
 
 </section>
 
