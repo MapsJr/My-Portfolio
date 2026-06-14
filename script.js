@@ -63,3 +63,64 @@ card.style.transform =
 });
 
 });
+
+const menuBtn = document.querySelector(".menu-btn");
+const navLinks = document.querySelector(".nav-links");
+
+menuBtn.addEventListener("click", () => {
+
+    menuBtn.classList.toggle("active");
+
+    navLinks.classList.toggle("active");
+
+});
+
+emailjs.init("Q4G9lo8P2wBuxYCPV");
+
+const contactForm =
+document.getElementById("contactForm");
+
+contactForm.addEventListener(
+"submit",
+async (e) => {
+
+    e.preventDefault();
+
+    const btn =
+    contactForm.querySelector("button");
+
+    btn.textContent =
+    "Sending...";
+
+    try{
+
+        await emailjs.send(
+            "service_qufv1hs",
+            "template_ovtrkb9",
+            {
+                name:
+                document.getElementById("name").value,
+
+                email:
+                document.getElementById("email").value,
+
+                message:
+                document.getElementById("message").value
+            }
+        );
+
+        btn.textContent =
+        "Message Sent ✓";
+
+        contactForm.reset();
+
+    }catch(error){
+
+        btn.textContent =
+        "Try Again";
+
+        console.error(error);
+
+    }
+
+});
